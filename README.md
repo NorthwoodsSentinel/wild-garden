@@ -8,18 +8,31 @@ An open-source seed kit for building security, accountability, and transparency 
 
 Built for the institutions that vendors stopped caring about: credit unions, municipalities, school districts, nonprofits, small businesses. Every one of them has the same compliance requirements as a Fortune 500. None of them have the budget. This is for them.
 
-## What You Get
+## What Exists Today
 
-Clone this repo. Run `wrangler deploy`. You're on Cloudflare with a working framework:
+This repository contains the **design specification** for Wild Garden, a proposed Cloudflare-based cooperative accountability system.
+
+It includes:
+
+- **System architecture design** — how components would interact (Workers, Tunnels, D1, R2, AI classification)
+- **Governance model** — cooperative accountability network structure and charter principles
+- **Data flow and storage strategy** — on-prem scanning, edge processing, examiner-ready reporting
+- **Roadmap** for a future deployable seed kit
+
+No deployable code is included in this repository yet.
+
+## What the Seed Kit Will Do (When Built)
+
+The goal is a one-command deployment: `wrangler deploy` gives you:
 
 - **On-prem scanning agent** — crawls file shares and databases behind your firewall
-- **Cloudflare Tunnel** — outbound-only, post-quantum encrypted (X25519MLKEM768 on TLS 1.3), no firewall changes needed
+- **Cloudflare Tunnel** — outbound-only, post-quantum encrypted, no firewall changes needed
 - **Workers orchestration** — serverless edge compute, processes scan results in milliseconds
 - **AI classification** — tiered approach: regex patterns first, LLM for ambiguous cases
 - **D1 + R2 storage** — results database and evidence storage, zero egress fees
 - **Examiner-ready reporting** — output mapped to compliance frameworks (NCUA, NIST CSF 2.0, ACET)
 
-Total infrastructure cost on Cloudflare's free tier: **$0**. On paid tier for a 200-person institution: **under $10/month**.
+Target infrastructure cost on Cloudflare's free tier: **$0**. On paid tier for a 200-person institution: **under $10/month**.
 
 ## The Wild Garden Network (Opt-In)
 
@@ -63,7 +76,9 @@ The seed kit is free because the code was never the value. The value is 20 years
 
 ## Status
 
-This project is in active development. The founding cohort (12 charter members) will define the governance framework before the network opens to the public.
+This project is in the **design and specification phase**. The founding cohort (12 charter members) will define the governance framework before the network opens to the public.
+
+The seed kit implementation has not started yet. Star this repo to know when it ships.
 
 If you want to be part of the founding table, open an issue or reach out.
 
